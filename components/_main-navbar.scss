@@ -5,21 +5,59 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 4px 0;
 
     .main-navbar__items {
       display: flex;
       justify-content: space-evenly;
-      align-items: center;
+      align-items: flex-end;
       gap: 10px;
       padding: 0;
 
       .main-navbar__item {
         list-style: none;
 
+        white-space: nowrap;
+        overflow: hidden;
+
         a {
           text-decoration: none;
+          p::first-line {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+          p {
+            font-size: 13px;
+            line-height: 1;
+            color: $navbar-text-color;
+            margin: 0;
+          }
         }
+      }
+      .main-navbar__item:not(:first-of-type) {
+        padding-left: 10px;
+        border-left: 1px solid $navbar-text-color;
       }
     }
   }
 }
+
+.main-nav-swiper {
+  width: 400px;
+  height: auto;
+
+  .swiper-wrapper {
+    .swiper-slide {
+    }
+  }
+}
+
+/* **************************
+***** MEDIA QUERIES ******************************************
+************************** */
+
+// @media screen and (min-width: 1170px) {
+//   .main {
+//     background: $navbar-text-color;
+//   }
+// }

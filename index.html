@@ -4,75 +4,123 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/vendor/swiper/8.4.6/swiper.min.css" />
+    <link rel="stylesheet" href="/vendor/swiper/8.4.6/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/output/style.css" />
     <title>Navigation bar with Swiper Playground</title>
   </head>
   <body>
     <!--MAIN NAVIGATION BAR NAVBAR -->
     <main class="main">
-      <div class="main-navbar">
-        <ul class="main-navbar__items">
-          <li class="main-navbar__item">
-            <a href="">Schools & Hospitals</a>
+      <div class="main-navbar main-nav-swiper">
+        <ul class="main-navbar__items swiper-wrapper">
+          <li class="main-navbar__item swiper-slide">
+            <a href="">
+              <p>
+                Schools <br />
+                & Hospitals
+              </p>
+            </a>
           </li>
-          <li class="main-navbar__item">
-            <a href="">Groundworks & Environmental Services</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>
+                Groundworks <br />
+                & Environmental Services
+              </p></a
+            >
           </li>
-          <li class="main-navbar__item">
-            <a href="">Local Authority Fencing and Groundworks</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>
+                Local Authority <br />
+                Fencing and Groundworks
+              </p></a
+            >
           </li>
-          <li class="main-navbar__item">
-            <a href="">Bespoke Animal Enclosures</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>
+                Bespoke <br />
+                Animal Enclosures
+              </p></a
+            >
           </li>
-          <li class="main-navbar__item">
-            <a href="">Predator Control Fencing</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>
+                Predator <br />
+                Control Fencing
+              </p></a
+            >
           </li>
-          <li class="main-navbar__item">
-            <a href="">Equestrian Fencing</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>
+                Equestrian <br />
+                Fencing
+              </p></a
+            >
           </li>
-          <li class="main-navbar__item">
-            <a href="">Pest & Pet Fencing</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>Pest & <br />Pet Fencing</p></a
+            >
           </li>
-          <li class="main-navbar__item">
-            <a href="">Security Fencing & Gates</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>
+                Security <br />
+                Fencing & Gates
+              </p></a
+            >
           </li>
-          <li class="main-navbar__item">
-            <a href="">Sports & Park Fencing</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>
+                Sports <br />
+                & Park Fencing
+              </p></a
+            >
           </li>
-          <li class="main-navbar__item">
-            <a href="">Supply Only Contractor and End User</a>
+          <li class="main-navbar__item swiper-slide">
+            <a href=""
+              ><p>
+                Supply Only <br />
+                Contractor and End User
+              </p></a
+            >
           </li>
         </ul>
       </div>
     </main>
 
-    <!-- <h1>Hello, Giovanni</h1> -->
+    <!-- SWIPER -->
+
     <!-- Slider main container -->
-    <div class="swiper">
+    <div class="swipe">
       <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
+      <div class="swipe-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        ...
+        <!-- <div class="swipe-slide">Slide 1</div>
+        <div class="swipe-slide">Slide 2</div>
+        <div class="swipe-slide">Slide 3</div>
+        <div class="swipe-slide">Slide 4</div>
+        <div class="swipe-slide">Slide 5</div>
+        <div class="swipe-slide">Slide 6</div> -->
       </div>
       <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+      <div class="swipe-pagination"></div>
 
       <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swipe-button-prev"></div>
+      <div class="swipe-button-next"></div>
 
       <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+      <div class="swipe-scrollbar"></div>
     </div>
 
-    <script src="/vendor/swiper/8.4.6/swiper.min.js"></script>
+    <script src="/vendor/swiper/8.4.6/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="main-nav.js"></script>
   </body>
 </html>
