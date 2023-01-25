@@ -1,63 +1,74 @@
-.main {
-  background: $primary-color;
-
-  .main-navbar {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4px 0;
-
-    .main-navbar__items {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: flex-end;
-      gap: 10px;
-      padding: 0;
-
-      .main-navbar__item {
-        list-style: none;
-
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  // border: 2px solid red;
+  position: relative;
+}
+.navbar__elements {
+  .navbar__element {
+    text-align: left;
+    a {
+      text-decoration: none;
+      p {
+        font-size: 12px;
+        font-weight: bolder;
+        line-height: 1.1;
+        margin-bottom: 0;
+        padding-left: 8px;
         white-space: nowrap;
-        overflow: hidden;
-
-        a {
-          text-decoration: none;
-          p::first-line {
-            font-size: 1.2rem;
-            font-weight: bold;
-          }
-          p {
-            font-size: 13px;
-            line-height: 1;
-            color: $navbar-text-color;
-            margin: 0;
-          }
-        }
+        color: $navbar-text-color;
       }
-      .main-navbar__item:not(:first-of-type) {
-        padding-left: 10px;
-        border-left: 1px solid $navbar-text-color;
+      p::first-line {
+        font-size: 18px;
       }
+    }
+  }
+  .navbar__element:not(:first-of-type) {
+    p {
+      border-left: 2px solid $navbar-text-color;
     }
   }
 }
 
-.main-nav-swiper {
-  width: 400px;
-  height: auto;
-
-  .swiper-wrapper {
-    .swiper-slide {
-    }
-  }
+.swiper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  // background-color: red;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid #ccc;
+  border-bottom: 50px solid transparent;
+  transform: skew(25deg) rotate(85deg);
 }
 
 /* **************************
 ***** MEDIA QUERIES ******************************************
 ************************** */
 
-// @media screen and (min-width: 1170px) {
-//   .main {
-//     background: $navbar-text-color;
-//   }
-// }
+@media screen and (min-width: 1201px) {
+  .navbar__elements {
+    navbar__element:first-of-type {
+      max-width: 80px;
+    }
+    .navbar__element:nth-of-type(5),
+    .navbar__element:nth-of-type(7),
+    .navbar__element:nth-of-type(8) {
+      max-width: 95px;
+    }
+    .navbar__element:nth-of-type(9) {
+      max-width: 85px;
+    }
+    .navbar__element:nth-of-type(3),
+    .navbar__element:nth-of-type(2) {
+      min-width: 140px;
+    }
+  }
+
+  .swiper::after {
+    display: none;
+  }
+}
