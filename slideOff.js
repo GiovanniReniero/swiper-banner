@@ -1,6 +1,14 @@
-const w = window.innerWidth;
-const mainNavSwiper = document.querySelector(".swiper").swiper;
-console.log(mainNavSwiper);
+var mainNavSwiper = document.querySelector(".swiper").swiper;
+
+var resizeTimeOut = null;
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimeOut);
+  resizeTimeOut = setTimeout(() => {
+    var w = window.innerWidth;
+    console.log(`${w} pixels in width!`);
+    swiper.slideTo(0);
+  }, 1000);
+});
 
 if (w > 1201) {
   mainNavSwiper.disable();
