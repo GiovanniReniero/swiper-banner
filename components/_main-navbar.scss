@@ -1,13 +1,15 @@
-.swiper {
+.main-navibar.swiper {
+  display: none;
   width: 100%;
-  max-width: 1200px;
+  max-width: 720px;
   margin: 0 auto;
-  padding-bottom: 10px;
+  padding: 10px 0 10px 10px;
   position: relative;
 }
 .navbar__elements {
   .navbar__element {
     text-align: left;
+    padding-left: 10px;
     width: auto !important;
 
     a {
@@ -39,13 +41,13 @@
   }
 }
 
-.swiper::after {
+.main-navibar.swiper::after {
   content: url("/resources/swipe.png");
+  // content: url("/images/page/swipe.png");
   position: absolute;
   top: -10px;
   right: 0;
   opacity: 0.1;
-  // width: auto !important;
   transition: opacity 1000ms ease-in-out;
   animation: pulsation;
   animation-duration: 6s;
@@ -67,14 +69,44 @@
 /* **************************
 ***** MEDIA QUERIES ******************************************
 ************************** */
+@media screen and (min-width: 768px) {
+  .main-navibar.swiper {
+    display: block;
+  }
 
-@media screen and (min-width: 1100px) {
-  .navbar__element {
-    navbar__element {
-      width: auto;
+  .nav-top-normal {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-navibar.swiper {
+    max-width: 990px;
+    padding: 16px 0 0 6px;
+
+    .navbar__elements {
+      .navbar__elements {
+        width: auto !important;
+      }
     }
   }
-  .swiper::after {
+}
+
+@media screen and (min-width: 1254px) {
+  .main-navibar.swiper {
+    max-width: 1200px;
+    padding: 20px 0px 0px 0px;
+
+    .navbar__elements {
+      .navbar__element {
+        margin-right: 5px !important;
+        a {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  .main-navibar.swiper::after {
     opacity: 0;
     animation: none;
   }

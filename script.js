@@ -1,26 +1,29 @@
-const swiper = new Swiper(".swiper", {
+var mainNavSw = new Swiper(".main-navibar.swiper", {
   // Optional parameters
   direction: "horizontal",
   slidesPerView: "auto",
   spaceBetween: 10,
 });
 
-var mainNavSwiper = document.querySelector(".swiper").swiper;
+console.log(mainNavSw);
 
 var resizeTimeOut = null;
+
 window.addEventListener("resize", function () {
   clearTimeout(resizeTimeOut);
-  resizeTimeOut = setTimeout(() => {
+
+  resizeTimeOut = setTimeout(function () {
     var w = window.innerWidth;
     console.log(`${w} pixels in width!`);
-    swiper.slideTo(0);
+    mainNavSw.slideTo(0);
   }, 1000);
 });
 
-if (w > 1201) {
-  mainNavSwiper.disable();
-  console.log(`${w} pixels in width, Swiper is disabled`);
+var width = window.innerWidth;
+if (width > 1254) {
+  mainNavSw.disable();
+  console.log(`${width} pixels in width, Swiper is disabled`);
 } else {
-  mainNavSwiper.enable();
-  console.log(`${w} pixels in width, Swiper is enabled`);
+  mainNavSw.enable();
+  console.log(`${width} pixels in width, Swiper is enabled`);
 }
